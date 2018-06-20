@@ -48,7 +48,7 @@ namespace BasketManagerWebApi.Controllers
                      
         // DELETE: api/Baskets/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBasket([FromRoute] int id)
+        public IActionResult DeleteBasket([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {

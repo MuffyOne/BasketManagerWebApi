@@ -68,13 +68,21 @@ namespace BasketManagerWebApi.Models
 
         }
 
-        public void ModifyCartItem(int id, BasketItem cartItem)
+        public ProductInjuiryResult ModifyCartItem(int id, BasketItem cartItem)
         {
             BasketItem existingItem = BasketProducts.FirstOrDefault(i => i.Id == id);
-            var oldQuantity = existingItem.Quantity;
-            var newQuantity = cartItem.Quantity;
+            var newQuantity = cartItem.Quantity - existingItem.Quantity;
+            if(newQuantity > 0)
+            {
+                var result = CheckProduct(cartItem.ProductId, newQuantity);
+                if(result != ProductInjuiryResult.Ok)
+                {
+                    return result;
+                }
+            }
             existingItem.Quantity = cartItem.Quantity;
-            UpdateProductStockQuantity(cartItem, newQuantity- oldQuantity);
+            UpdateProductStockQuantity(cartItem, newQuantity);
+            return ProductInjuiryResult.Ok;
         }
 
         private void CreateNewBasket(int cartId)
