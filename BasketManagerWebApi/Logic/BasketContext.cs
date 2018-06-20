@@ -33,14 +33,14 @@ namespace BasketManagerWebApi.Models
             }
             return ProductInjuiryResult.Ok;
         }
-               
+
         internal IEnumerable<BasketItem> GetBasketItems(int? cartId)
         {
-           if(cartId == -1)
+            if (cartId == -1)
             {
                 return BasketProducts;
             }
-           else
+            else
             {
                 return BasketProducts.Where(i => i.BasketId == cartId);
             }
@@ -87,6 +87,23 @@ namespace BasketManagerWebApi.Models
         {
             var product = _productContext.GetProducts().First(i => i.Id == cartItem.ProductId);
             product.StockQuantity -= cartItem.Quantity;
+        }
+
+        public BasketDeleteResult DeleteBasketAndAllElements(int basketId)
+        {
+            var basket = Baskets.FirstOrDefault(i => i.BasketId == basketId);
+            if (basket == null)
+            {
+                return BasketDeleteResult.NotFound;
+            }
+            else
+            {
+                var products = BasketProducts.FirstOrDefault(i=> i.BasketId == basketId);
+                BasketProducts.RemoveRange(products);
+                Baskets.Remove(basket);
+                SaveChanges();
+            }
+            return BasketDeleteResult.Ok;
         }
     }
 }

@@ -38,7 +38,7 @@ namespace BasketManagerWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var cartItem =  _context.BasketProducts.FindAsync(id);
+            var cartItem = await _context.BasketProducts.FindAsync(id);
 
             if (cartItem == null)
             {

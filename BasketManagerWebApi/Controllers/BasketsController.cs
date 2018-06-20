@@ -55,16 +55,13 @@ namespace BasketManagerWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var basket = await _context.Baskets.FindAsync(id);
-            if (basket == null)
+            var result = _context.DeleteBasketAndAllElements(id);
+
+            if(result == Enums.BasketDeleteResult.NotFound)
             {
-                return NotFound();
+                return NotFound(string.Format("basket with id {0} not found", id));
             }
-
-            _context.Baskets.Remove(basket);
-            await _context.SaveChangesAsync();
-
-            return Ok(basket);
+            return Ok();
         }
 
         private bool BasketExists(int id)
