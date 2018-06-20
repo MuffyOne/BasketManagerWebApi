@@ -1,0 +1,30 @@
+﻿[
+  {
+    "id": 1,
+    "Title": "Sony Alpha a7R III",
+    "Description": "Sony Alpha a7R III Mirrorless Digital Camera (Body Only)",
+    "Price": 3000.00,
+    "StockQuantity": 45
+  },
+  {
+    "id": 2,
+    "Title": "Canon EOS 5D Mark IV",
+    "Description": "Canon EOS 5D Mark IV DSLR Camera (Body Only)",
+    "Price": 3099.00,
+    "StockQuantity": 10
+  },
+  {
+    "id": 3,
+    "Title": "Sony Alpha a6500",
+    "Description": "Sony Alpha a6500 Mirrorless Digital Camera with 18-135mm Lens ",
+    "Price": 1500.50,
+    "StockQuantity": 1
+  },
+  {
+    "id": 4,
+    "Title": "Sony Cyber-shot DSC-RX100 VI",
+    "Description": "Sony Cyber-shot DSC-RX100 VI Digital Camera",
+    "Price": 1200.00,
+    "StockQuantity": 150
+  }
+]
