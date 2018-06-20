@@ -64,8 +64,17 @@ namespace BasketManagerWebApi.Models
                 existingItem.Quantity += cartItem.Quantity;
             }
             UpdateBasketProperty(cartItem, cartId);
-            UpdateProductStockQuantity(cartItem);
+            UpdateProductStockQuantity(cartItem, null);
 
+        }
+
+        public void ModifyCartItem(int id, BasketItem cartItem)
+        {
+            BasketItem existingItem = BasketProducts.FirstOrDefault(i => i.Id == id);
+            var oldQuantity = existingItem.Quantity;
+            var newQuantity = cartItem.Quantity;
+            existingItem.Quantity = cartItem.Quantity;
+            UpdateProductStockQuantity(cartItem, newQuantity- oldQuantity);
         }
 
         private void CreateNewBasket(int cartId)
@@ -83,10 +92,12 @@ namespace BasketManagerWebApi.Models
             basket.TotalPrice += (product.Price * cartItem.Quantity);
         }
 
-        private void UpdateProductStockQuantity(BasketItem cartItem)
+        private void UpdateProductStockQuantity(BasketItem cartItem, int? quantity)
         {
             var product = _productContext.GetProducts().First(i => i.Id == cartItem.ProductId);
-            product.StockQuantity -= cartItem.Quantity;
+            int modifyQuantity = quantity == null ? cartItem.Quantity : (int)quantity;
+            product.StockQuantity -= modifyQuantity;
+
         }
 
         public BasketDeleteResult DeleteBasketAndAllElements(int basketId)
@@ -98,7 +109,7 @@ namespace BasketManagerWebApi.Models
             }
             else
             {
-                var products = BasketProducts.FirstOrDefault(i=> i.BasketId == basketId);
+                var products = BasketProducts.FirstOrDefault(i => i.BasketId == basketId);
                 BasketProducts.RemoveRange(products);
                 Baskets.Remove(basket);
                 SaveChanges();

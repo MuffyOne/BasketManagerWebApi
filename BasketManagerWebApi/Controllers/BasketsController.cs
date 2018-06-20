@@ -55,7 +55,7 @@ namespace BasketManagerWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var result = _context.DeleteBasketAndAllElements(id);
+            var result =  _context.DeleteBasketAndAllElements(id);
 
             if(result == Enums.BasketDeleteResult.NotFound)
             {

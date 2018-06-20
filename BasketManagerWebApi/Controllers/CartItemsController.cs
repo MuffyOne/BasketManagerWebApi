@@ -24,7 +24,7 @@ namespace BasketManagerWebApi.Controllers
 
         // GET: api/CartItems
         [HttpGet]
-        public IEnumerable<BasketItem> GetCartProducts([FromQuery] int cartId=-1)
+        public IEnumerable<BasketItem> GetCartProducts([FromQuery] int cartId = -1)
         {
             return _context.GetBasketItems(cartId);
         }
@@ -48,7 +48,41 @@ namespace BasketManagerWebApi.Controllers
             return Ok(cartItem);
         }
 
-       
+        // PUT: api/CartItems/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCartItem([FromRoute] int id, [FromBody] BasketItem cartItem)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != cartItem.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.ModifyCartItem(id, cartItem);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CartItemExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
         // POST: api/CartItems
         [HttpPost]
         public async Task<IActionResult> PostCartItem([FromBody] BasketItem cartItem, [BindRequired][FromQuery] int cartId)
@@ -69,7 +103,7 @@ namespace BasketManagerWebApi.Controllers
                 return NotFound(string.Format("{0} items of product {1} were not found in stock!", cartItem.Quantity, cartItem.ProductId));
             }
             _context.AddProduct(cartItem, cartId);
-           
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCartItem", new { id = cartItem.Id }, cartItem);
