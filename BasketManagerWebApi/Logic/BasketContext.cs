@@ -1,7 +1,6 @@
 ﻿using BasketManagerWebApi.Enums;
 using BasketManagerWebApi.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -58,6 +57,7 @@ namespace BasketManagerWebApi.Models
             if (existingItem == null)
             {
                 BasketProducts.Add(cartItem);
+                SaveChanges();
             }
             else
             {
@@ -65,7 +65,6 @@ namespace BasketManagerWebApi.Models
             }
             UpdateBasketProperty(cartItem, cartId);
             UpdateProductStockQuantity(cartItem, null);
-
         }
 
         public ProductInjuiryResult ModifyCartItem(int id, BasketItem cartItem)

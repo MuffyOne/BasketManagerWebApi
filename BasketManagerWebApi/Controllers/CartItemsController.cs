@@ -78,7 +78,7 @@ namespace BasketManagerWebApi.Controllers
 
         // POST: api/CartItems
         [HttpPost]
-        public async Task<IActionResult> PostCartItem([FromBody] BasketItem cartItem, [BindRequired][FromQuery] int cartId)
+        public IActionResult PostCartItem([FromBody] BasketItem cartItem, [BindRequired][FromQuery] int cartId)
         {
             if (!ModelState.IsValid)
             {
@@ -96,8 +96,6 @@ namespace BasketManagerWebApi.Controllers
                 return NotFound(string.Format("{0} items of product {1} were not found in stock!", cartItem.Quantity, cartItem.ProductId));
             }
             _context.AddProduct(cartItem, cartId);
-
-            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCartItem", new { id = cartItem.Id }, cartItem);
         }
