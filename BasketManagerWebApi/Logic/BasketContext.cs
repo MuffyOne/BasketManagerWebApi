@@ -33,7 +33,7 @@ namespace BasketManagerWebApi.Models
             return ProductInjuiryResult.Ok;
         }
 
-        internal IEnumerable<BasketItem> GetBasketItems(int? cartId)
+        public IEnumerable<BasketItem> GetBasketItems(int? cartId)
         {
             if (cartId == -1)
             {
@@ -104,7 +104,6 @@ namespace BasketManagerWebApi.Models
             var product = _productContext.GetProducts().First(i => i.Id == cartItem.ProductId);
             int modifyQuantity = quantity == null ? cartItem.Quantity : (int)quantity;
             product.StockQuantity -= modifyQuantity;
-
         }
 
         public BasketDeleteResult DeleteBasketAndAllElements(int basketId)

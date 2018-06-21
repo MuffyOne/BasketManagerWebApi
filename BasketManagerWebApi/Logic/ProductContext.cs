@@ -14,7 +14,7 @@ namespace BasketManagerWebApi.Logic
         #region constructor
         public ProductContext()
         {
-            LoadProducts();
+            _products = LoadProductsFromStore();
         }
         #endregion
 
@@ -24,11 +24,12 @@ namespace BasketManagerWebApi.Logic
             return _products;
         }
 
-        public void LoadProducts()
+        public IEnumerable<Product> LoadProductsFromStore()
         {
             var jsonFile = @"..\BasketManagerWebApi\Resources\ProductList.json";
             var stringToDeserialize = File.ReadAllText(jsonFile);
-            _products = JsonConvert.DeserializeObject<List<Product>>(stringToDeserialize);
+            var products = JsonConvert.DeserializeObject<List<Product>>(stringToDeserialize);
+            return products;
         }
         #endregion
 
