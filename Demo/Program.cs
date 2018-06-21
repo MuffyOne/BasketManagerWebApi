@@ -1,4 +1,5 @@
-﻿using ClientLibrary;
+﻿using BasketManagerWebApi.Common.Models;
+using ClientLibrary;
 using System;
 using System.Threading.Tasks;
 
@@ -13,8 +14,10 @@ namespace Demo
 
         private static async Task BeginProcess()
         {
-            var result = await BasketManagerLibrary.GetCartProducts();
-            result = await BasketManagerLibrary.GetCartProduct(1);
+            //var listOfProducts = await BasketManagerLibrary.GetCartProducts();
+            //var product = await BasketManagerLibrary.GetCartProduct(1);
+            var productToSend = new BasketItem() { ProductId = 1, Quantity = 1 };
+            var result = await BasketManagerLibrary.PostCartItem(productToSend,123);
         }
     }
 }
