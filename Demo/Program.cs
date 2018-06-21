@@ -14,6 +14,7 @@ namespace Demo
         private static async Task BeginProcess()
         {
             var result = await BasketManagerLibrary.GetCartProducts();
+            result = await BasketManagerLibrary.GetCartProduct(1);
         }
     }
 }

@@ -26,5 +26,22 @@ namespace ClientLibrary
             }
             return cartItems;
         }
+
+        public async static Task<List<BasketItem>> GetCartProduct(int productId)
+        {
+            List<BasketItem> cartItems = null;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage response = await httpClient.GetAsync("https://localhost:44336/api/CartItems/" + productId);
+                if (response.IsSuccessStatusCode)
+                {
+                    string data = await response.Content.ReadAsStringAsync();
+                    cartItems = JsonConvert.DeserializeObject<List<BasketItem>>(data);
+                }
+            }
+            return cartItems;
+        }
     }
 }
