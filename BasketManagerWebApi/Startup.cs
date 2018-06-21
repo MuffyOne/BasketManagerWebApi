@@ -26,7 +26,6 @@ namespace BasketManagerWebApi
             services.AddSingleton<IProductContext>(new ProductContext());
             services.AddDbContext<BasketContext>(options => options.UseInMemoryDatabase(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +40,7 @@ namespace BasketManagerWebApi
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace BasketManagerWebApi.Models
+﻿namespace BasketManagerWebApi.Common.Models
 {
     public class BasketItem
     {

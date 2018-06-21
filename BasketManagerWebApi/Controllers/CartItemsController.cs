@@ -1,13 +1,11 @@
-﻿using System;
+﻿using BasketManagerWebApi.Common.Models;
+using BasketManagerWebApi.Enums;
+using BasketManagerWebApi.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using BasketManagerWebApi.Models;
-using BasketManagerWebApi.Enums;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace BasketManagerWebApi.Controllers
 {
@@ -64,11 +62,11 @@ namespace BasketManagerWebApi.Controllers
 
             var result = _context.ModifyCartItem(id, cartItem);
 
-            if (result == ProductInjuiryResult.NotFound)
+            if (result == ProductInjuryResult.NotFound)
             {
                 return NotFound(string.Format("The product id {0} was not found!", cartItem.ProductId));
             }
-            else if (result == ProductInjuiryResult.QuantityNotAvailable)
+            else if (result == ProductInjuryResult.QuantityNotAvailable)
             {
                 return NotFound(string.Format("{0} items of product {1} were not found in stock!", cartItem.Quantity, cartItem.ProductId));
             }
@@ -85,13 +83,13 @@ namespace BasketManagerWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            ProductInjuiryResult productInjuiryResult = _context.CheckProduct(cartItem.ProductId, cartItem.Quantity);
+            ProductInjuryResult productInjuryResult = _context.CheckProduct(cartItem.ProductId, cartItem.Quantity);
 
-            if (productInjuiryResult == ProductInjuiryResult.NotFound)
+            if (productInjuryResult == ProductInjuryResult.NotFound)
             {
                 return NotFound(string.Format("The product id {0} was not found!", cartItem.ProductId));
             }
-            else if (productInjuiryResult == ProductInjuiryResult.QuantityNotAvailable)
+            else if (productInjuryResult == ProductInjuryResult.QuantityNotAvailable)
             {
                 return NotFound(string.Format("{0} items of product {1} were not found in stock!", cartItem.Quantity, cartItem.ProductId));
             }

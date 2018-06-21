@@ -1,4 +1,5 @@
-﻿using BasketManagerWebApi.Interfaces;
+﻿using BasketManagerWebApi.Common.Models;
+using BasketManagerWebApi.Interfaces;
 using BasketManagerWebApi.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -8,17 +9,19 @@ namespace BasketManagerWebApi.Logic
 {
     public class ProductContext : IProductContext
     {
-
         private IEnumerable<Product> _products;
 
         #region constructor
+
         public ProductContext()
         {
             _products = LoadProductsFromStore();
         }
-        #endregion
+
+        #endregion constructor
 
         #region Methods
+
         public IEnumerable<Product> GetProducts()
         {
             return _products;
@@ -31,7 +34,7 @@ namespace BasketManagerWebApi.Logic
             var products = JsonConvert.DeserializeObject<List<Product>>(stringToDeserialize);
             return products;
         }
-        #endregion
 
+        #endregion Methods
     }
 }

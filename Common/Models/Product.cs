@@ -1,6 +1,5 @@
-﻿namespace BasketManagerWebApi.Models
+﻿namespace BasketManagerWebApi.Common.Models
 {
-
     public class Product
     {
         public int Id { get; set; }
@@ -9,5 +8,4 @@
         public double Price { get; set; }
         public int StockQuantity { get; set; }
     }
-
 }
