@@ -27,7 +27,7 @@ namespace BasketManagerWebApi.Models
         /// <param name="basketId">The basket identifier.</param>
         public void AddProduct(BasketItem basketItem, int basketId)
         {
-            var basket = Baskets.FirstOrDefault(i => i.Id == basketId);
+            var basket = Baskets.FirstOrDefault(i => i.BasketId == basketId);
             if (basket == null)
             {
                 CreateNewBasket(basketId);
@@ -37,7 +37,6 @@ namespace BasketManagerWebApi.Models
             if (existingItem == null)
             {
                 BasketProducts.Add(basketItem);
-                SaveChanges();
             }
             else
             {
@@ -45,6 +44,7 @@ namespace BasketManagerWebApi.Models
             }
             UpdateBasketProperty(basketItem, basketId);
             UpdateProductStockQuantity(basketItem, null);
+            SaveChanges();
         }
 
         /// <summary>
@@ -86,7 +86,10 @@ namespace BasketManagerWebApi.Models
             else
             {
                 var products = BasketProducts.FirstOrDefault(i => i.BasketId == basketId);
-                BasketProducts.RemoveRange(products);
+                if (products != null)
+                {
+                    BasketProducts.RemoveRange(products);
+                }
                 Baskets.Remove(basket);
                 SaveChanges();
             }
@@ -120,6 +123,10 @@ namespace BasketManagerWebApi.Models
         public ProductInjuryResult ModifyCartItem(int id, BasketItem basketItem)
         {
             BasketItem existingItem = BasketProducts.FirstOrDefault(i => i.Id == id);
+            if (existingItem == null)
+            {
+                return ProductInjuryResult.NotFound;
+            }
             var newQuantity = basketItem.Quantity - existingItem.Quantity;
             if (newQuantity > 0)
             {
@@ -131,6 +138,7 @@ namespace BasketManagerWebApi.Models
             }
             existingItem.Quantity = basketItem.Quantity;
             UpdateProductStockQuantity(basketItem, newQuantity);
+            SaveChanges();
             return ProductInjuryResult.Ok;
         }
 

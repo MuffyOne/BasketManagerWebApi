@@ -47,7 +47,7 @@ namespace BasketManagerWebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var basket = await _context.Baskets.FindAsync(id);
+            var basket = _context.Baskets.FirstOrDefault(i => i.BasketId == id);
 
             if (basket == null)
             {
