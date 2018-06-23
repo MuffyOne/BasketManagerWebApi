@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="afa467b4-deed-48c3-b7b6-71d210a90765" Title="BasketManagerWebApi Namespace" Url="html/N-BasketManagerWebApi.htm">
+    <HelpTOCNode Id="93fd9140-2a0a-4867-b3c3-99af25f29c10" Title="Program Class" Url="html/T-BasketManagerWebApi.Program.htm">
+      <HelpTOCNode Title="Program Members" Url="html/AllMembers.T-BasketManagerWebApi.Program.htm" />
+      <HelpTOCNode Id="6f79ee07-2d68-46cb-be20-a332a315e943" Title="Program Methods" Url="html/Methods.T-BasketManagerWebApi.Program.htm">
+        <HelpTOCNode Title="CreateWebHostBuilder Method " Url="html/M-BasketManagerWebApi.Program.CreateWebHostBuilder.htm" />
+        <HelpTOCNode Title="Main Method " Url="html/M-BasketManagerWebApi.Program.Main.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9505414c-e016-45cf-b9ea-218c60cf05db" Title="Startup Class" Url="html/T-BasketManagerWebApi.Startup.htm">
+      <HelpTOCNode Title="Startup Members" Url="html/AllMembers.T-BasketManagerWebApi.Startup.htm" />
+      <HelpTOCNode Title="Startup Constructor " Url="html/M-BasketManagerWebApi.Startup.-ctor.htm" />
+      <HelpTOCNode Id="103a5a0c-b4f5-4a80-908f-f66cd8ca9887" Title="Startup Methods" Url="html/Methods.T-BasketManagerWebApi.Startup.htm">
+        <HelpTOCNode Title="Configure Method " Url="html/M-BasketManagerWebApi.Startup.Configure.htm" />
+        <HelpTOCNode Title="ConfigureServices Method " Url="html/M-BasketManagerWebApi.Startup.ConfigureServices.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="86ab4aa7-8e70-4018-9c99-94ef58126fba" Title="Startup Properties" Url="html/Properties.T-BasketManagerWebApi.Startup.htm">
+        <HelpTOCNode Title="Configuration Property " Url="html/P-BasketManagerWebApi.Startup.Configuration.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2d027b81-e860-4e32-9363-95b4cdf4e22b" Title="BasketManagerWebApi.Common.Models Namespace" Url="html/N-BasketManagerWebApi.Common.Models.htm">
+    <HelpTOCNode Id="f26fb36a-a34c-455b-ac5b-966e7a015253" Title="Basket Class" Url="html/T-BasketManagerWebApi.Common.Models.Basket.htm">
+      <HelpTOCNode Title="Basket Members" Url="html/AllMembers.T-BasketManagerWebApi.Common.Models.Basket.htm" />
+      <HelpTOCNode Title="Basket Methods" Url="html/Methods.T-BasketManagerWebApi.Common.Models.Basket.htm" />
+      <HelpTOCNode Id="c0ff7c85-3b71-4fc7-8e24-6035f7ae4191" Title="Basket Properties" Url="html/Properties.T-BasketManagerWebApi.Common.Models.Basket.htm">
+        <HelpTOCNode Title="BasketId Property " Url="html/P-BasketManagerWebApi.Common.Models.Basket.BasketId.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-BasketManagerWebApi.Common.Models.Basket.Id.htm" />
+        <HelpTOCNode Title="ItemQuantity Property " Url="html/P-BasketManagerWebApi.Common.Models.Basket.ItemQuantity.htm" />
+        <HelpTOCNode Title="TotalPrice Property " Url="html/P-BasketManagerWebApi.Common.Models.Basket.TotalPrice.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a95af5ed-3e97-4967-9d46-c68a14c4f22a" Title="BasketItem Class" Url="html/T-BasketManagerWebApi.Common.Models.BasketItem.htm">
+      <HelpTOCNode Title="BasketItem Members" Url="html/AllMembers.T-BasketManagerWebApi.Common.Models.BasketItem.htm" />
+      <HelpTOCNode Title="BasketItem Methods" Url="html/Methods.T-BasketManagerWebApi.Common.Models.BasketItem.htm" />
+      <HelpTOCNode Id="99c52da2-d74b-4c16-bdf7-c10c4096156c" Title="BasketItem Properties" Url="html/Properties.T-BasketManagerWebApi.Common.Models.BasketItem.htm">
+        <HelpTOCNode Title="BasketId Property " Url="html/P-BasketManagerWebApi.Common.Models.BasketItem.BasketId.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-BasketManagerWebApi.Common.Models.BasketItem.Id.htm" />
+        <HelpTOCNode Title="ProductId Property " Url="html/P-BasketManagerWebApi.Common.Models.BasketItem.ProductId.htm" />
+        <HelpTOCNode Title="Quantity Property " Url="html/P-BasketManagerWebApi.Common.Models.BasketItem.Quantity.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="476c5184-6759-4886-ac89-aece36a7ea45" Title="Product Class" Url="html/T-BasketManagerWebApi.Common.Models.Product.htm">
+      <HelpTOCNode Title="Product Members" Url="html/AllMembers.T-BasketManagerWebApi.Common.Models.Product.htm" />
+      <HelpTOCNode Title="Product Methods" Url="html/Methods.T-BasketManagerWebApi.Common.Models.Product.htm" />
+      <HelpTOCNode Id="cc6a4cf3-1fa9-48fb-8833-ed34c718ef35" Title="Product Properties" Url="html/Properties.T-BasketManagerWebApi.Common.Models.Product.htm">
+        <HelpTOCNode Title="Description Property " Url="html/P-BasketManagerWebApi.Common.Models.Product.Description.htm" />
+        <HelpTOCNode Title="Id Property " Url="html/P-BasketManagerWebApi.Common.Models.Product.Id.htm" />
+        <HelpTOCNode Title="Price Property " Url="html/P-BasketManagerWebApi.Common.Models.Product.Price.htm" />
+        <HelpTOCNode Title="StockQuantity Property " Url="html/P-BasketManagerWebApi.Common.Models.Product.StockQuantity.htm" />
+        <HelpTOCNode Title="Title Property " Url="html/P-BasketManagerWebApi.Common.Models.Product.Title.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ec471d61-ed50-4f42-8482-e31d5e74f92c" Title="BasketManagerWebApi.Controllers Namespace" Url="html/N-BasketManagerWebApi.Controllers.htm">
+    <HelpTOCNode Id="4035f3a9-9ca0-4111-8703-b0b0a41e507e" Title="BasketsController Class" Url="html/T-BasketManagerWebApi.Controllers.BasketsController.htm">
+      <HelpTOCNode Title="BasketsController Members" Url="html/AllMembers.T-BasketManagerWebApi.Controllers.BasketsController.htm" />
+      <HelpTOCNode Title="BasketsController Constructor " Url="html/M-BasketManagerWebApi.Controllers.BasketsController.-ctor.htm" />
+      <HelpTOCNode Id="a5068e8b-8fea-4b34-b573-cb3edb519297" Title="BasketsController Methods" Url="html/Methods.T-BasketManagerWebApi.Controllers.BasketsController.htm">
+        <HelpTOCNode Title="DeleteBasket Method " Url="html/M-BasketManagerWebApi.Controllers.BasketsController.DeleteBasket.htm" />
+        <HelpTOCNode Title="GetBasket Method " Url="html/M-BasketManagerWebApi.Controllers.BasketsController.GetBasket.htm" />
+        <HelpTOCNode Title="GetBaskets Method " Url="html/M-BasketManagerWebApi.Controllers.BasketsController.GetBaskets.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="BasketsController Properties" Url="html/Properties.T-BasketManagerWebApi.Controllers.BasketsController.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="90320d8d-4935-4962-9511-136d2ab1dfd4" Title="CartItemsController Class" Url="html/T-BasketManagerWebApi.Controllers.CartItemsController.htm">
+      <HelpTOCNode Title="CartItemsController Members" Url="html/AllMembers.T-BasketManagerWebApi.Controllers.CartItemsController.htm" />
+      <HelpTOCNode Title="CartItemsController Constructor " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.-ctor.htm" />
+      <HelpTOCNode Id="68b7ee80-da4a-4ba7-8147-e0f72eeaa773" Title="CartItemsController Methods" Url="html/Methods.T-BasketManagerWebApi.Controllers.CartItemsController.htm">
+        <HelpTOCNode Title="DeleteBasketItem Method " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.DeleteBasketItem.htm" />
+        <HelpTOCNode Title="GetBasketItem Method " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.GetBasketItem.htm" />
+        <HelpTOCNode Title="GetBasketProducts Method " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.GetBasketProducts.htm" />
+        <HelpTOCNode Title="PostBasketItem Method " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.PostBasketItem.htm" />
+        <HelpTOCNode Title="PutBasketItem Method " Url="html/M-BasketManagerWebApi.Controllers.CartItemsController.PutBasketItem.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="CartItemsController Properties" Url="html/Properties.T-BasketManagerWebApi.Controllers.CartItemsController.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="c35ab7f3-73f6-4c89-afa4-2e226a55e289" Title="BasketManagerWebApi.Enums Namespace" Url="html/N-BasketManagerWebApi.Enums.htm">
+    <HelpTOCNode Title="BasketDeleteResult Enumeration" Url="html/T-BasketManagerWebApi.Enums.BasketDeleteResult.htm" />
+    <HelpTOCNode Title="ProductInjuryResult Enumeration" Url="html/T-BasketManagerWebApi.Enums.ProductInjuryResult.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="36c86294-518a-4ab6-b78f-e2130f6c1edf" Title="BasketManagerWebApi.Interfaces Namespace" Url="html/N-BasketManagerWebApi.Interfaces.htm">
+    <HelpTOCNode Id="9c92abb3-d7bc-4220-8437-a610077f3dc5" Title="IProductContext Interface" Url="html/T-BasketManagerWebApi.Interfaces.IProductContext.htm">
+      <HelpTOCNode Title="IProductContext Members" Url="html/AllMembers.T-BasketManagerWebApi.Interfaces.IProductContext.htm" />
+      <HelpTOCNode Id="3751b3bb-18ea-49a0-a71e-a7f8c873cfa9" Title="IProductContext Methods" Url="html/Methods.T-BasketManagerWebApi.Interfaces.IProductContext.htm">
+        <HelpTOCNode Title="GetProducts Method " Url="html/M-BasketManagerWebApi.Interfaces.IProductContext.GetProducts.htm" />
+        <HelpTOCNode Title="LoadProductsFromStore Method " Url="html/M-BasketManagerWebApi.Interfaces.IProductContext.LoadProductsFromStore.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2c0214f6-127d-4af8-a168-19f0097c7bfc" Title="BasketManagerWebApi.Logic Namespace" Url="html/N-BasketManagerWebApi.Logic.htm">
+    <HelpTOCNode Id="88d8ca4e-b24c-4bff-8432-07aee5ed430f" Title="ProductContext Class" Url="html/T-BasketManagerWebApi.Logic.ProductContext.htm">
+      <HelpTOCNode Title="ProductContext Members" Url="html/AllMembers.T-BasketManagerWebApi.Logic.ProductContext.htm" />
+      <HelpTOCNode Title="ProductContext Constructor " Url="html/M-BasketManagerWebApi.Logic.ProductContext.-ctor.htm" />
+      <HelpTOCNode Id="a924c3b2-d9c1-412e-8143-ce9c941e2d84" Title="ProductContext Methods" Url="html/Methods.T-BasketManagerWebApi.Logic.ProductContext.htm">
+        <HelpTOCNode Title="GetProducts Method " Url="html/M-BasketManagerWebApi.Logic.ProductContext.GetProducts.htm" />
+        <HelpTOCNode Title="LoadProductsFromStore Method " Url="html/M-BasketManagerWebApi.Logic.ProductContext.LoadProductsFromStore.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="78279b0a-af9f-4f8d-bbc2-eb72d5e1a23f" Title="BasketManagerWebApi.Models Namespace" Url="html/N-BasketManagerWebApi.Models.htm">
+    <HelpTOCNode Id="55c97b34-2a6e-4bdd-9b67-41f9da69873c" Title="BasketContext Class" Url="html/T-BasketManagerWebApi.Models.BasketContext.htm">
+      <HelpTOCNode Title="BasketContext Members" Url="html/AllMembers.T-BasketManagerWebApi.Models.BasketContext.htm" />
+      <HelpTOCNode Title="BasketContext Constructor " Url="html/M-BasketManagerWebApi.Models.BasketContext.-ctor.htm" />
+      <HelpTOCNode Id="d88da44e-5f74-4125-9fd9-c8c8c99d1860" Title="BasketContext Methods" Url="html/Methods.T-BasketManagerWebApi.Models.BasketContext.htm">
+        <HelpTOCNode Title="AddProduct Method " Url="html/M-BasketManagerWebApi.Models.BasketContext.AddProduct.htm" />
+        <HelpTOCNode Title="CheckProduct Method " Url="html/M-BasketManagerWebApi.Models.BasketContext.CheckProduct.htm" />
+        <HelpTOCNode Title="DeleteBasketAndAllElements Method " Url="html/M-BasketManagerWebApi.Models.BasketContext.DeleteBasketAndAllElements.htm" />
+        <HelpTOCNode Title="GetBasketItems Method " Url="html/M-BasketManagerWebApi.Models.BasketContext.GetBasketItems.htm" />
+        <HelpTOCNode Title="ModifyCartItem Method " Url="html/M-BasketManagerWebApi.Models.BasketContext.ModifyCartItem.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5f3d0392-7ec5-4c63-8ed2-a57d9c42f34a" Title="BasketContext Properties" Url="html/Properties.T-BasketManagerWebApi.Models.BasketContext.htm">
+        <HelpTOCNode Title="BasketProducts Property " Url="html/P-BasketManagerWebApi.Models.BasketContext.BasketProducts.htm" />
+        <HelpTOCNode Title="Baskets Property " Url="html/P-BasketManagerWebApi.Models.BasketContext.Baskets.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="b2b70e4e-5ff3-4c34-b57c-2094b62ac68e" Title="ClientLibrary Namespace" Url="html/N-ClientLibrary.htm">
+    <HelpTOCNode Id="474dbfe3-8aa0-4321-b652-525129a44d63" Title="BasketManagerLibrary Class" Url="html/T-ClientLibrary.BasketManagerLibrary.htm">
+      <HelpTOCNode Title="BasketManagerLibrary Members" Url="html/AllMembers.T-ClientLibrary.BasketManagerLibrary.htm" />
+      <HelpTOCNode Id="e0aeb17b-6518-4175-a6ec-c453d1436249" Title="BasketManagerLibrary Methods" Url="html/Methods.T-ClientLibrary.BasketManagerLibrary.htm">
+        <HelpTOCNode Title="DeleteBasketAndAllElements Method " Url="html/M-ClientLibrary.BasketManagerLibrary.DeleteBasketAndAllElements.htm" />
+        <HelpTOCNode Title="DeleteCartItem Method " Url="html/M-ClientLibrary.BasketManagerLibrary.DeleteCartItem.htm" />
+        <HelpTOCNode Title="GetBasket Method " Url="html/M-ClientLibrary.BasketManagerLibrary.GetBasket.htm" />
+        <HelpTOCNode Title="GetBaskets Method " Url="html/M-ClientLibrary.BasketManagerLibrary.GetBaskets.htm" />
+        <HelpTOCNode Title="GetCartProduct Method " Url="html/M-ClientLibrary.BasketManagerLibrary.GetCartProduct.htm" />
+        <HelpTOCNode Title="GetCartProducts Method " Url="html/M-ClientLibrary.BasketManagerLibrary.GetCartProducts.htm" />
+        <HelpTOCNode Title="PostCartItem Method " Url="html/M-ClientLibrary.BasketManagerLibrary.PostCartItem.htm" />
+        <HelpTOCNode Title="PutCartItem Method " Url="html/M-ClientLibrary.BasketManagerLibrary.PutCartItem.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
