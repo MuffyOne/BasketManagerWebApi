@@ -1,7 +1,4 @@
-﻿/// <summary>
-/// The Enums namespace.
-/// </summary>
-namespace BasketManagerWebApi.Enums
+﻿namespace BasketManagerWebApi.Enums
 {
     public enum ProductInjuryResult
     {
