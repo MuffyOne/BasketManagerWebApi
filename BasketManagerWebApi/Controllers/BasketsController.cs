@@ -40,7 +40,7 @@ namespace BasketManagerWebApi.Controllers
         /// <param name="id">The identifier of the basket you want to get.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBasket([FromRoute] int id)
+        public IActionResult GetBasket([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {

@@ -87,8 +87,10 @@ namespace ClientLibrary
                 httpClient.BaseAddress = new Uri(_baseAddress);
                 var json = JsonConvert.SerializeObject(basketItem);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Put, "api/CartItems/" + basketItemId);
-                httpRequestMessage.Content = content;
+                HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Put, "api/CartItems/" + basketItemId)
+                {
+                    Content = content
+                };
                 HttpResponseMessage response = await httpClient.SendAsync(httpRequestMessage);
                 if (response.IsSuccessStatusCode)
                 {
